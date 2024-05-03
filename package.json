@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "20.11.1"
+  },
   "name": "airbnb",
   "version": "1.0.0",
   "description": "A project about airbnb website and with almost same functionalities",
