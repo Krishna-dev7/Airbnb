@@ -1,0 +1,117 @@
+<%- layout("layouts/boilerplate"); %>
+<body class="mt-5">
+
+    <div class=" row">
+    <form novalidate enctype="multipart/form-data"
+    class="form row col col-lg-6 offset-3 row-cols-1 needs-validation" 
+    action="/listings" method="post">
+    
+        <h3 class="mb-3 p-2 col-10 offset-1"> Create new listing </h3>
+        <div class="mb-1 p-2 col-lg-10  offset-1">
+            <label for="title" class="form-label">
+                Title
+            </label>
+            <input 
+                class="form-control mb-2" 
+                type="text" 
+                name="listing[title]"
+                id="title" 
+                placeholder="title" 
+                required
+                />
+            <div class="invalid-feedback">
+                That's looks good
+            </div>
+        </div>
+
+        <div class="mb-1 p-2 col-10 offset-1">
+            <label for="price" class="form-label">
+                price
+            </label>
+            <input 
+            class="form-control mb-2"
+            type="number" 
+            name="listing[price]" 
+            id="price" 
+            placeholder="Price"
+            required
+            >
+            <div class="invalid-feedback">
+                enter valid price
+            </div>
+        </div>
+
+        <div class="mb-1 p-2 col-10 offset-1">
+            <label for="image" class="form-label">
+                Add image
+            </label>
+            <input 
+                class="form-control mb-2"
+                type="file" 
+                name="listing[image]" 
+                id="image"
+                multiple
+            />
+            <div class="invalid-feedback">
+                upload some images
+            </div>
+        </div>
+        
+        <div class="mb-2 p-2 col-lg-10 offset-1">
+            <label for="description" class="form-label">
+                description
+            </label>
+            
+            <textarea 
+                class="form-control mb-2"
+                name="listing[description]" 
+                id="description" 
+                cols="30" rows="3"
+                required></textarea>
+            <div class="invalid-feedback">
+                add some description
+            </div>
+        </div>
+
+        <div class="mb-1 col-10 offset-1 row row-cols-2 p-0">
+            <div>
+                <label for="country" class="form-label">
+                    country
+                </label>
+                <input 
+                    class="form-control mb-2"
+                    type="text" 
+                    name="listing[country]" 
+                    id="country"
+                    placeholder="country"
+                    required>
+                    <div class="invalid-feedback">
+                        Add valid country
+                    </div>
+    
+                </div>
+
+            <div>
+                <label for="location" class="form-label">
+                    city, state or zip code
+                </label>
+                <input 
+                    class="form-control mb-2"
+                    type="text" 
+                    name="listing[location]" 
+                    id="location"
+                    placeholder="location"
+                    required>
+                    <div class="invalid-feedback">
+                        Add valid location
+                    </div>
+           </div>
+        </div>
+
+        
+        <button class="btn btn-danger pt-2 pb-2 col-lg-2 offset-1  text-center ml-2" type="submit">
+            Post
+        </button>
+    </form>
+</div>
+</body>

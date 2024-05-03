@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mb-5 ">
+  <div class="container-fluid d-flex justify-content-around align-items-center">
+    <a class="navbar-brand pt-2 text-danger fw-bold" href="/listings">
+      <i class="ri-compass-3-line "></i>Airbnb</a>
+    <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="  collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav text-danger">
+        <a class="nav-link active" aria-current="page" href="/listings">Home</a>
+        <a class="nav-link" href="/listings/new">Add Listings</a>
+        <a class="nav-link" href="#">contact</a>
+      </div>
+    </div>
+    <div class=" wrap-login">
+        <% if(!isLoggedIn) {%>
+          <a class="ms-1"  href="/signup">signup</a>
+          <a class="ms-1"  href="/login">login</a>
+        <% } else { %>
+          <a class="ms-1"  href="/logout">logout</a>
+        <% } %>
+    </div>
+  </div>
+</nav>

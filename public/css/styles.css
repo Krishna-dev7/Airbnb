@@ -1,0 +1,144 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    text-decoration: none !important;
+}
+
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    
+}
+
+#container {
+    width: 95%;
+    height: 100%;
+    /* gap: 10px; */
+    margin: 20px auto;
+}
+
+a {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.listings.card{
+    border-radius: 14px;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+img {
+    width: 90%;
+    margin: 10px auto;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.detail {
+    /* width: 80%; */
+    border-radius: 14px;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.detail img {
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+    border-radius: 25px;
+    display: block;
+    /* margin: 1px; */
+}
+
+.detail h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.detail #about {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.detail #price {
+    color: orangered;
+}
+
+.form {
+    margin: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    /* padding: 30px; */
+}
+
+.form-control {
+    font-size: 1rem;
+    text-indent: 5px;
+}
+
+.card-img-overlay {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    /* backdrop-filter: blur(300px); */
+    background-color: white;
+}
+
+.navbar-nav, .navbar-brand {
+    font-size: 0.9rem !important;
+    /* height: 2.5rem; */
+}
+
+footer {
+    background-color: #f5f5f5e7;
+}
+
+textarea {
+    overflow: hidden;
+}
+
+.starability-result {
+    font-size: 10px !important;
+}
+
+
+/* @media only screen and (max-width: 700px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */

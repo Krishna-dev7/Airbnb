@@ -1,0 +1,46 @@
+<%- layout("/layouts/boilerplate"); %>
+
+<form novalidate
+    class="form row col col-lg-6 offset-3 mt-5 row-cols-1 needs-validation" 
+    action="/login" method="post">
+
+    <h3 class="mb-3 p-2 col-10  offset-1"> Login on Wanderlust</h3>
+        <div class="mb-1 p-2 col-10  offset-1">
+            <label for="username" class="form-label">
+                username
+            </label>
+            <input 
+                class="form-control mb-2" 
+                type="text" 
+                name="username"
+                id="username" 
+                required
+                />
+            <div class="valid-feedback">
+                That's looks good
+            </div>
+            <div class="invalid-feedback">
+                username is required
+            </div>
+        </div>
+
+        <div class="mb-1 p-2 col-10  offset-1">
+            <label for="password" class="form-label">
+                password
+            </label>
+            <input 
+                class="form-control mb-2" 
+                type="password" 
+                name="password"
+                id="password" 
+                required
+                />
+            <div class="invalid-feedback">
+                password is required
+            </div>
+        </div>
+
+        <button class="btn  btn-dark col-3 offset-1 ">
+            login
+        </button>
+</form>
