@@ -3,11 +3,11 @@
     
     <div class="container">
     <form novalidate
-        class="form row row-cols-1 col-lg-8 offset-2 p-1 border border-dark needs-validation"
+        class="form row row-cols-1 col-lg-8 col-sm-10 offset-2 p-1 needs-validation"
         action="/listings/<%= data['_id'] %>?_method=PUT" method="post">
         <h4 class="p-2 text-center">  Edit your listing </h4>
         <h5 class="p-2 text-center"> <%= data["_id"] %> </h5>
-        <div class="col col-lg-10 offset-1 p-1  p-2">
+        <div class="col col-10 offset-1 p-1  p-2">
             <label for="title" class="form-label">title</label> 
             <input 
                 type="text" 
@@ -91,13 +91,12 @@
                 id="description" 
                 cols="30" rows="3"
                 class="form-control mb-3" required >
-                <%= data.description %>
-            </textarea>
+                <%= data.description %></textarea>
             <div class="invalid-feedback">
                 add some description
             </div>
 
-            <button class="btn btn-primary px-2 col-lg-2 offset-0">submit</button>
+            <button class="btn btn-sm btn-primary px-2 col-3 offset-0">submit</button>
         </div>
         </form>
     </div>
