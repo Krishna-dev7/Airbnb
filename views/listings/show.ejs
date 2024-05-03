@@ -85,21 +85,23 @@
                 <div class="control-div">
                     <label for="rating">Rating</label>
                     
-                    <fieldset id="rating" class="starability-heartbeat">
-                        <input type="radio" id="first-rate1" name="review[rating]" value="1" checked/>
-                        <label for="first-rate1" title="Terrible">1 star</label>
-                        <input type="radio" id="first-rate2" name="review[rating]" value="2" />
-                        <label for="first-rate2" title="Not good">2 stars</label>
-                        <input type="radio" id="first-rate3" name="review[rating]" value="3" />
-                        <label for="first-rate3" title="Average">3 stars</label>
-                        <input type="radio" id="first-rate4" name="review[rating]" value="4" />
-                        <label for="first-rate4" title="Very good">4 stars</label>
-                        <input type="radio" id="first-rate5" name="review[rating]" value="5" />
-                        <label for="first-rate5" title="Amazing">5 stars</label>
-                      </fieldset>
+                    <div class="col-10 ">
+                        <fieldset id="rating" class="starability-heartbeat">
+                            <input type="radio" id="first-rate1"  name="review[rating]" value="1" checked/>
+                            <label for="first-rate1" title="Terrible">1 star</label>
+                            <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                            <label for="first-rate2" title="Not good">2 stars</label>
+                            <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                            <label for="first-rate3" title="Average">3 stars</label>
+                            <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                            <label for="first-rate4" title="Very good">4 stars</label>
+                            <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                            <label for="first-rate5" title="Amazing">5 stars</label>
+                          </fieldset>
+                    </div>
                 </div>
 
-                <div>
+                <div class="p-1">
                     <label for="comment" class="mt-3">Comment</label>
                     <textarea 
                         name="review[comment]" 
@@ -114,12 +116,18 @@
                 <button class="btn btn-outline-dark mt-3">submit</button>
             </form>
             <% } %>
+
+
+
             <hr>
             <!-- Our all reviews -->
             <div class="row">
-                <p><b>All Reviews</b></p>
+
+                <% if(data.review.length != 0) {%>
+                    <p><b>All Reviews</b></p>
+                <% } %>
                 <% for( let review of data.review) { %>
-                    <div class="card col-5 ms-3 mt-3">
+                    <div class="card col-lg-5 col-sm-8 ms-2 mt-3">
                         <div class="card-body"> 
                             <div class=" card-title d-flex fs-6 justify-content-between">
                                <b>  @<%= review.createdBy.username %> </b>  
