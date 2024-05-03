@@ -7,12 +7,14 @@
   "description": "A project about airbnb website and with almost same functionalities",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "build_with_cloudinary": "npm install cloudinary",
+    "build": "npm install",
+    "start": "node app.js"
   },
   "author": "Krishna",
   "license": "ISC",
   "dependencies": {
-    "cloudinary": "^2.2.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
